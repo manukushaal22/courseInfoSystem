@@ -4,8 +4,11 @@
 <link rel="stylesheet" href="{% static 'css/syllabusnav.css' %}">
 
 <div class="sidenav">
+
     {% for subject in  subjects %}
+
         <li><a href="{% url 'syllabusdetail' id=subject.subjectid%}">{{ subject.name }}</a></li>
+
     {% empty %}<li>Sorry, no subjects added yet.</li>
     {% endfor %}
 </div>

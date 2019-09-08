@@ -20,7 +20,7 @@ class Subject(models.Model):
     unit_4=models.TextField()
     unit_5=models.TextField()
     def __str__(self):
-        return u"%s" % self.name
+        return self.name
 
 class References(models.Model):
     name=models.CharField('Subject name',max_length=100)
@@ -28,7 +28,7 @@ class References(models.Model):
     books=models.TextField(null=True)
     web=models.TextField('Web Sources',null=True)
     def __str__(self):
-        return u"%s" % self.name
+        return  self.name
 
 class Student(models.Model):
     user = models.OneToOneField(User,default=1,on_delete='CASCADE')
